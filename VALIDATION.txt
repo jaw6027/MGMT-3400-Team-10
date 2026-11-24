@@ -1,0 +1,40 @@
+Validation performed 2026-11-23 (America/Los_Angeles)
+
+Initial import
+Database: /workspace/MGMT-3400-Team-10/output/retailers.sqlite3
+suppliers: 9
+supplier_categories: 11
+parts: 0
+supplier_listings: 0
+purchases: 0
+purchase_items: 0
+integrity_check: ok
+foreign_key_check: []
+
+Repeated business database import
+Database: /workspace/MGMT-3400-Team-10/output/retailers.sqlite3
+suppliers: 9
+supplier_categories: 11
+parts: 0
+supplier_listings: 0
+purchases: 0
+purchase_items: 0
+integrity_check: ok
+foreign_key_check: []
+
+Isolated integration validation
+PASS: CSV contains nine unique unverified leads with no verification dates
+PASS: Six required tables, enabled foreign keys, nine suppliers and eleven category links
+PASS: Second import adds no duplicates and preserves manually edited supplier details
+PASS: Integrity and foreign key checks pass; category filtering returns 5 computer, 2 console and 4 mobile leads
+PASS: Separate Python process reopens persisted suppliers and manual edit
+PASS: Documented comparison isolates exact part/currency and puts unknown totals last
+PASS: Constraints reject orphan keys, duplicate categories, invalid categories/costs/quantities and mismatched purchase listings
+PASS: Explicit CSV updates apply; invalid imports roll back without partial data edits
+All 8 validation groups passed. Synthetic records removed with temporary database.
+
+Readback from business database
+computers: 5 supplier leads
+game consoles: 2 supplier leads
+mobile devices: 4 supplier leads
+All nine suppliers unverified; no fabricated parts, listings or purchases.

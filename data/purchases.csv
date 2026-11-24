@@ -1,0 +1,1 @@
+id,supplier_id,order_reference,order_date,currency,shipping_cents,tax_cents,total_cents,arrival_date
