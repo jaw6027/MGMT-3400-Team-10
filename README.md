@@ -116,3 +116,11 @@ configuration (recorded in the “Set up MGMT-3400-Team-10” chat). This README
 provides the implemented and verified reusable commands. Configuration-editing tools
 were unavailable in this session, so the environment configuration itself was not
 updated.
+
+## Tech 2 Go customer website prototype
+
+The responsive prototype in `website/` shows sample daily van stops, demo call/text
+controls and an appointment request preview. Open `website/index.html` in a browser
+or run `python3 -m http.server 4173 --directory website`. Build a portable HTML file
+and source ZIP with `python3 scripts/package_website.py`. See `website/README.md`
+for configuration, testing and what is needed to accept real bookings.
