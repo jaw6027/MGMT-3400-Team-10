@@ -3,7 +3,7 @@
 Open `index.html` in your browser, or serve this folder from the repository root:
 
 ```sh
-python3 -m http.server 4173 --directory website
+python3 -m http.server 4173 --directory Website
 ```
 
 Visit http://localhost:4173. No build step, API keys or application dependencies.

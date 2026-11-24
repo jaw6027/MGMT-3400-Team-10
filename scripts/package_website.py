@@ -3,7 +3,7 @@
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 ROOT = Path(__file__).resolve().parents[1]
-site = ROOT / 'website'
+site = ROOT / 'Website'
 output = ROOT / 'output'
 output.mkdir(exist_ok=True)
 html = (site / 'index.html').read_text()
@@ -16,6 +16,6 @@ with ZipFile(output/'tech2go-website.zip','w',ZIP_DEFLATED) as archive:
     archive.write(portable, portable.name)
     for file in sorted(site.iterdir()):
         if file.is_file():
-            archive.write(file, 'website/' + file.name)
+            archive.write(file, 'Website/' + file.name)
 print(portable)
 print(output/'tech2go-website.zip')

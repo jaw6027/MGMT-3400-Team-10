@@ -119,8 +119,8 @@ updated.
 
 ## Tech 2 Go customer website prototype
 
-The responsive prototype in `website/` shows sample daily van stops, demo call/text
-controls and an appointment request preview. Open `website/index.html` in a browser
-or run `python3 -m http.server 4173 --directory website`. Build a portable HTML file
-and source ZIP with `python3 scripts/package_website.py`. See `website/README.md`
+The responsive prototype in `Website/` shows sample daily van stops, demo call/text
+controls and an appointment request preview. Open `Website/index.html` in a browser
+or run `python3 -m http.server 4173 --directory Website`. Build a portable HTML file
+and source ZIP with `python3 scripts/package_website.py`. See `Website/README.md`
 for configuration, testing and what is needed to accept real bookings.
