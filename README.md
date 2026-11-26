@@ -176,3 +176,28 @@ exact board model, socket, RAM type and form factor; the text list links officia
 manufacturer specifications and explains CPU-support/BIOS checks. No OEM
 prebuilt-system drop-in fit or gaming performance is implied. All four selected
 listings record Newegg as the actual seller; prices exclude tax and shipping.
+
+## Proposed customer repair pricing
+
+`pricing/pricing_model.txt` explains a proposed pricing policy and gives 26
+standalone service/product examples based on the existing parts catalog.
+`pricing/repair_prices.csv` contains the calculated prices and cost breakdowns.
+These are planning estimates; supplier freight/tax, customer sales tax if applicable,
+travel and unlisted work are excluded. Out-of-stock components are flagged.
+
+Edit the selling rates and cost assumptions in `pricing/assumptions.json` and the
+labor times/component quantities in `pricing/services.csv`. Regenerate with:
+
+```sh
+python3 scripts/price_repairs.py
+python3 tests/validate_pricing.py
+```
+
+The model uses a $95 labor selling rate, 30% parts markup, $15 per-repair overhead
+allowance and a 5% reserve on revenue, then rounds upward to $5. A proposed $35
+diagnostic fee is credited toward approved completed repairs. Rates/times are
+business assumptions, not a survey of local prices. Fractional pack/consumable
+usage is explicit; shared teardown and resealing must be recalculated for combined
+jobs. Financial reserves do not define a customer warranty. This workflow does
+not change supplier prices, the SQLite sourcing database or the customer website.
+See `pricing/VALIDATION.txt` for the observed checks.

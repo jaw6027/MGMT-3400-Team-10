@@ -1,0 +1,250 @@
+TECH 2 GO - REPAIR PRICING MODEL
+Model date: 2026-11-26 | USD | Business-planning assumptions
+
+This model uses the existing dated parts catalog. It is not a competitor survey
+or a guarantee of actual repair time, margin, availability or final customer price.
+No new supplier prices were researched. Product source links and model compatibility
+are in common_parts_prices.txt and data/supplier_listings.csv.
+
+EDITABLE ASSUMPTIONS
+Labor selling rate: $95.00/hour.
+Minimum repair labor: 0.50 hours. Product-only sales have no labor minimum.
+Parts markup: 30.00% above allocated catalog cost (23.08% margin on that parts charge).
+Per-repair overhead allowance: $15.00; product-only sale allowance: $0.
+Rework/warranty reserve: 5.00% of modeled pretax revenue.
+Round customer planning prices UP to the next $5.00.
+Loaded technician cost for contribution analysis: $45.00/billed hour.
+All rates and times are proposed assumptions; replace them with measured business costs.
+
+FORMULA
+P = allocated catalog merchandise cost of the recipe (parts, kits, packs, consumables).
+B = P x (1 + markup) + billable hours x labor rate + per-job overhead.
+Planning price = round UP [ B / (1 - reserve rate) ] to the rounding increment.
+Component cost and parts/labor charges are rounded to cents before final rounding.
+Contribution = price - P - assumed technician cost - overhead allowance - reserve.
+This contribution is NOT net profit. It excludes unknown sourcing costs, payment fees,
+taxes, travel, idle time and fixed costs not covered by the per-job overhead allowance.
+The hourly labor rate is selling revenue, not a second cash labor expense.
+
+DIAGNOSTICS AND QUOTING
+Proposed diagnostic fee: $35.00 for up to 0.25 hours of initial assessment.
+For completed repairs, credit that fee against the full modeled price; do not add it.
+Balance due = approved repair total minus diagnostic deposit already paid, plus any agreed extra costs/tax.
+If the customer declines repair, the proposed charge is the diagnostic fee only.
+Time beyond the initial assessment requires an agreed quote. This is a proposed
+business policy, not an existing customer agreement. Routine diagnosis/testing are
+included in the service-hour assumptions; do not charge for the same time twice.
+
+PLANNING PRICES BY SERVICE
+All prices below EXCLUDE unquoted supplier shipping, sourcing taxes, customer sales
+tax if applicable, travel and unlisted additional work. Missing costs are not known zero.
+Baseline scenario uses merchandise costs only. Confirm delivered procurement costs
+before issuing a quote; replace P with actual landed cost where appropriate and
+avoid counting recoverable taxes or separately billed freight twice.
+
+CELLPHONE
+--------------------
+S101 | iPhone 13 LCD screen replacement | Planning price $210.00
+  Parts: $86.98; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $10.50; preliminary contribution: $63.77
+  Cost recipe: 101 x 1 @ $81.99; 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Extra display adhesive budgeted conservatively; remove if already included in kit. Transfer paired sensors and explain LCD limitations.
+
+S102 | iPhone 13 battery replacement | Planning price $165.00
+  Parts: $50.98; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $8.25; preliminary contribution: $57.02
+  Cost recipe: 102 x 1 @ $45.99; 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Includes a conservative separate reseal allowance; verify kit contents to avoid duplicated adhesive. Calibration/testing included in labor assumption.
+
+S103 | iPhone 13 Lightning port replacement | Planning price $245.00
+  Parts: $54.98; labor: 1.50h / $142.50; overhead: $15.00
+  Reserve: $12.25; preliminary contribution: $95.27
+  Cost recipe: 103 x 1 @ $49.99; 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Modular assembly only; excludes liquid damage and logic-board repairs.
+
+S104 | iPhone 13 loudspeaker replacement | Planning price $135.00
+  Parts: $29.98; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $6.75; preliminary contribution: $49.52
+  Cost recipe: 104 x 1 @ $24.99; 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Assumes diagnosis confirms the speaker; includes reseal allowance.
+
+S105 | iPhone 13 rear camera replacement | Planning price $135.00
+  Parts: $29.98; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $6.75; preliminary contribution: $49.52
+  Cost recipe: 105 x 1 @ $24.99; 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Camera module only; excludes outer camera glass and board faults.
+
+S106 | iPhone 13 standalone display reseal | Planning price $100.00
+  Parts: $4.99; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $5.00; preliminary contribution: $41.26
+  Cost recipe: 106 x 1 @ $4.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Only quote if no other repair already includes the same opening/reseal work. No water-resistance guarantee.
+
+LAPTOP
+--------------------
+S107 | Latitude 5490 battery replacement | Planning price $205.00
+  Parts: $99.95; labor: 0.50h / $47.50; overhead: $15.00
+  Reserve: $10.25; preliminary contribution: $57.30
+  Cost recipe: 107 x 1 @ $99.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Match voltage and internal clearance; assumes no swollen-battery case damage.
+
+S108 | Replacement 65W Dell charger sale | Planning price $35.00
+  Parts: $24.95; labor: 0.00h / $0.00; overhead: $0.00
+  Reserve: $1.75; preliminary contribution: $8.30
+  Cost recipe: 108 x 1 @ $24.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Product-only sale at the scheduled van stop; no diagnostic labor or installation. Any troubleshooting is quoted separately.
+
+S109 | Latitude 5490 DC jack replacement | Planning price $130.00
+  Parts: $7.95; labor: 1.00h / $95.00; overhead: $15.00
+  Reserve: $6.50; preliminary contribution: $55.55
+  Cost recipe: 109 x 1 @ $7.95
+  Status: planning_only; freight/tax unquoted;part 109 refurbished
+  Scope: Refurbished modular cable/jack; excludes soldering or motherboard repair.
+
+S110 | Latitude 5490 cooling fan replacement | Planning price $135.00
+  Parts: $12.95; labor: 1.00h / $95.00; overhead: $15.00
+  Reserve: $6.75; preliminary contribution: $55.30
+  Cost recipe: 110 x 1 @ $12.95
+  Status: planning_only; freight/tax unquoted;part 110 used
+  Scope: Used very-good OEM fan for integrated-graphics U-type configuration; inspect heatsink/paste needs separately.
+
+S111 | Latitude 5490 keyboard replacement | Planning price $170.00
+  Parts: $19.95; labor: 1.25h / $118.75; overhead: $15.00
+  Reserve: $8.50; preliminary contribution: $70.30
+  Cost recipe: 111 x 1 @ $19.95
+  Status: planning_only; freight/tax unquoted;part 111 refurbished
+  Scope: Refurbished dual-point US keyboard only; excludes liquid-damage remediation.
+
+S112 | Latitude 5490 FHD screen replacement | Planning price $160.00
+  Parts: $49.95; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $8.00; preliminary contribution: $53.30
+  Cost recipe: 112 x 1 @ $49.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Panel only; assumes intact hinges/cable/bezel and compatible non-touch configuration.
+
+S113 | Latitude 5490 RAM replacement or upgrade | Planning price $125.00
+  Parts: $39.95; labor: 0.50h / $47.50; overhead: $15.00
+  Reserve: $6.25; preliminary contribution: $41.30
+  Cost recipe: 113 x 1 @ $39.95
+  Status: planning_only; freight/tax unquoted;part 113 condition unknown
+  Scope: One 8GB module plus memory test; confirm source condition and compatibility first.
+
+S114 | Latitude 5490 SSD hardware replacement | Planning price $150.00
+  Parts: $39.95; labor: 0.75h / $71.25; overhead: $15.00
+  Reserve: $7.50; preliminary contribution: $53.80
+  Cost recipe: 114 x 1 @ $39.95
+  Status: planning_only; freight/tax unquoted;part 114 condition unknown
+  Scope: Hardware installation and detection test only; excludes OS installation/software licenses/data migration/recovery. Confirm interface and condition.
+
+DESKTOP
+--------------------
+S115 | OptiPlex 7050 SFF power supply replacement | Planning price $160.00
+  Parts: $29.95; labor: 1.00h / $95.00; overhead: $15.00
+  Reserve: $8.00; preliminary contribution: $62.05
+  Cost recipe: 115 x 1 @ $29.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Whole compatible PSU swap; no internal PSU repair. Excludes other electrical damage.
+
+S116 | iMac 27-inch Late 2013 RAM upgrade | Planning price $115.00
+  Parts: $34.99; labor: 0.50h / $47.50; overhead: $15.00
+  Reserve: $5.75; preliminary contribution: $36.76
+  Cost recipe: 116 x 1 @ $34.99
+  Status: planning_only; freight/tax unquoted
+  Scope: One 4GB module through the rear memory access; includes memory test and no screen-opening charge.
+
+S117 | iMac 27-inch Late 2013 SATA SSD replacement | Planning price $400.00
+  Parts: $132.98; labor: 2.00h / $190.00; overhead: $15.00
+  Reserve: $20.00; preliminary contribution: $142.02
+  Cost recipe: 117 x 1 @ $102.99; 121 x 1 @ $29.99
+  Status: planning_only; freight/tax unquoted;part 117 out of stock
+  Scope: Hardware-only job. Extra reseal kit budgeted conservatively; remove overlap if included in SSD kit. Confirm mounting and sensor accessories; OS/data work extra.
+
+S118 | iMac 27-inch Late 2013 cooling fan replacement | Planning price $345.00
+  Parts: $92.98; labor: 2.00h / $190.00; overhead: $15.00
+  Reserve: $17.25; preliminary contribution: $129.77
+  Cost recipe: 118 x 1 @ $62.99; 121 x 1 @ $29.99
+  Status: planning_only; freight/tax unquoted;part 118 out of stock
+  Scope: Includes one reseal kit; requires screen removal. Out-of-stock fan prevents a firm quote.
+
+S119 | iMac 27-inch Late 2013 thermal paste service | Planning price $325.00
+  Parts: $39.94; labor: 2.50h / $237.50; overhead: $15.00
+  Reserve: $16.25; preliminary contribution: $141.31
+  Cost recipe: 119 x 1 @ $9.95; 121 x 1 @ $29.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Includes access/reassembly and one reseal kit; budgets a full paste retail unit conservatively. Extra thermal pads or damage not included.
+
+S120 | iMac 27-inch Late 2013 display data cable replacement | Planning price $235.00
+  Parts: $49.98; labor: 1.50h / $142.50; overhead: $15.00
+  Reserve: $11.75; preliminary contribution: $90.77
+  Cost recipe: 120 x 1 @ $19.99; 121 x 1 @ $29.99
+  Status: planning_only; freight/tax unquoted;part 120 out of stock
+  Scope: Includes screen access and reseal kit; excludes damaged display or logic board. Cable availability must be confirmed.
+
+S121 | iMac 27-inch Late 2013 standalone display reseal | Planning price $160.00
+  Parts: $29.99; labor: 1.00h / $95.00; overhead: $15.00
+  Reserve: $8.00; preliminary contribution: $62.01
+  Cost recipe: 121 x 1 @ $29.99
+  Status: planning_only; freight/tax unquoted
+  Scope: No other repair included; do not add this entire service to another quote that already includes resealing.
+
+S122 | OptiPlex 7050 SFF CMOS battery replacement | Planning price $70.00
+  Parts: $2.00; labor: 0.50h / $47.50; overhead: $15.00
+  Reserve: $3.50; preliminary contribution: $27.00
+  Cost recipe: 122 x 0.5 @ $3.99
+  Status: planning_only; freight/tax unquoted
+  Scope: Consumes one cell from the listed two-cell pack; remaining cell stays as stock. Includes BIOS date/settings check; no board repair.
+
+S123 | Office/basic ASRock A520M-HDV motherboard swap | Planning price $320.00
+  Parts: $74.98; labor: 2.00h / $190.00; overhead: $15.00
+  Reserve: $16.00; preliminary contribution: $124.02
+  Cost recipe: 123 x 1 @ $72.99; 119 x 0.2 @ $9.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Existing compatible AM4 CPU/DDR4/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit; confirm actual consumption. BIOS/OS activation issues extra.
+
+S124 | Office/basic MSI PRO H610M-G DDR4 motherboard swap | Planning price $370.00
+  Parts: $111.98; labor: 2.00h / $190.00; overhead: $15.00
+  Reserve: $18.50; preliminary contribution: $134.52
+  Cost recipe: 124 x 1 @ $109.99; 119 x 0.2 @ $9.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Existing compatible LGA1700 CPU/DDR4/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit. Not a proprietary OEM drop-in quote.
+
+S125 | Gaming/personal MSI B650 GAMING PLUS WIFI motherboard swap | Planning price $420.00
+  Parts: $111.98; labor: 2.50h / $237.50; overhead: $15.00
+  Reserve: $21.00; preliminary contribution: $159.52
+  Cost recipe: 125 x 1 @ $109.99; 119 x 0.2 @ $9.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Existing compatible AM5 CPU/DDR5/GPU/cooler/ATX case/PSU reused. Paste allowance is 20 percent of one retail unit. Excludes tuning/overclocking/CPU or RAM platform conversion.
+
+S126 | Gaming/personal ASRock B650M Pro RS WiFi motherboard swap | Planning price $420.00
+  Parts: $111.98; labor: 2.50h / $237.50; overhead: $15.00
+  Reserve: $21.00; preliminary contribution: $159.52
+  Cost recipe: 126 x 1 @ $109.99; 119 x 0.2 @ $9.95
+  Status: planning_only; freight/tax unquoted
+  Scope: Existing compatible AM5 CPU/DDR5/GPU/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit. Excludes new-build assembly and platform conversion.
+
+BUNDLING AND COST CONTROL
+The 26 rows are alternative standalone jobs, not an invoice to add together.
+For combined work, use one shared teardown/reassembly labor allowance, one overhead
+allowance and only the parts/adhesive/paste actually consumed; recalculate the formula.
+Full retail kits are retained conservatively in several recipes. Confirm contents
+and remove duplicate tools/adhesive allowances before quoting; tools reused by the
+van belong in overhead rather than being purchased anew for every repair.
+S122 allocates half a two-cell battery pack. Motherboard jobs allocate 20% of one
+paste retail unit as an assumption; measure consumption and revise this fraction.
+Motherboard prices assume reuse of compatible components, not an entire new system.
+Compare the quote against the device replacement value after inspecting the device.
+Do not promise unavailable parts or a warranty based solely on a financial reserve.
+
+REGENERATE
+Edit pricing/assumptions.json and pricing/services.csv, then run:
+  python3 scripts/price_repairs.py
+The script reads catalog CSVs and writes pricing/repair_prices.csv plus this text file.
+Supplier prices and the SQLite supplier database are not modified by this model.

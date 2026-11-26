@@ -1,0 +1,15 @@
+Tech 2 Go proposed repair pricing validation - 2026-11-26
+
+$ python3 tests/validate_pricing.py
+PASS: independent price/reserve/contribution calculations; minimum labor; product-only sale.
+PASS: all 26 catalog items covered; kits, fractional packs and shared consumables priced.
+PASS: out-of-stock and unknown freight/tax preserved as planning warnings.
+PASS: negative/non-finite inputs and invalid reserve rates rejected; generated files reproducible.
+
+$ python3 tests/validate_catalog.py
+PASS: 26 products/listings (6 cellphone, 8 laptop, 12 desktop).
+PASS: Every text price, product ID and URL matches the catalog; cents and dates valid.
+PASS: Tracked SQLite snapshot matches all six source CSV tables and repeat imports.
+PASS: integrity_check=ok; foreign_key_check=[]; unknown costs stay incomplete.
+PASS: Three out-of-stock references labeled; no fabricated purchases.
+PASS: Two motherboards per use-case subcategory, actual sellers and compatibility recorded.

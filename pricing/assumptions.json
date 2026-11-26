@@ -1,0 +1,13 @@
+{
+  "model_date": "2026-11-26",
+  "currency": "USD",
+  "labor_rate_per_hour": "95.00",
+  "loaded_technician_cost_per_hour": "45.00",
+  "minimum_service_hours": "0.50",
+  "parts_markup_percent": "30.00",
+  "service_overhead_per_job": "15.00",
+  "rework_reserve_percent_of_revenue": "5.00",
+  "round_up_to_dollars": "5.00",
+  "diagnostic_fee": "35.00",
+  "diagnostic_hours": "0.25"
+}

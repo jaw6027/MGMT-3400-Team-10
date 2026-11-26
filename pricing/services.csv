@@ -1,0 +1,27 @@
+service_id,primary_part_id,service_name,labor_hours,job_type,components,scope_notes
+S101,101,iPhone 13 LCD screen replacement,0.75,repair,101:1;106:1,Extra display adhesive budgeted conservatively; remove if already included in kit. Transfer paired sensors and explain LCD limitations.
+S102,102,iPhone 13 battery replacement,0.75,repair,102:1;106:1,Includes a conservative separate reseal allowance; verify kit contents to avoid duplicated adhesive. Calibration/testing included in labor assumption.
+S103,103,iPhone 13 Lightning port replacement,1.50,repair,103:1;106:1,Modular assembly only; excludes liquid damage and logic-board repairs.
+S104,104,iPhone 13 loudspeaker replacement,0.75,repair,104:1;106:1,Assumes diagnosis confirms the speaker; includes reseal allowance.
+S105,105,iPhone 13 rear camera replacement,0.75,repair,105:1;106:1,Camera module only; excludes outer camera glass and board faults.
+S106,106,iPhone 13 standalone display reseal,0.75,repair,106:1,Only quote if no other repair already includes the same opening/reseal work. No water-resistance guarantee.
+S107,107,Latitude 5490 battery replacement,0.50,repair,107:1,Match voltage and internal clearance; assumes no swollen-battery case damage.
+S108,108,Replacement 65W Dell charger sale,0.00,product,108:1,Product-only sale at the scheduled van stop; no diagnostic labor or installation. Any troubleshooting is quoted separately.
+S109,109,Latitude 5490 DC jack replacement,1.00,repair,109:1,Refurbished modular cable/jack; excludes soldering or motherboard repair.
+S110,110,Latitude 5490 cooling fan replacement,1.00,repair,110:1,Used very-good OEM fan for integrated-graphics U-type configuration; inspect heatsink/paste needs separately.
+S111,111,Latitude 5490 keyboard replacement,1.25,repair,111:1,Refurbished dual-point US keyboard only; excludes liquid-damage remediation.
+S112,112,Latitude 5490 FHD screen replacement,0.75,repair,112:1,Panel only; assumes intact hinges/cable/bezel and compatible non-touch configuration.
+S113,113,Latitude 5490 RAM replacement or upgrade,0.50,repair,113:1,One 8GB module plus memory test; confirm source condition and compatibility first.
+S114,114,Latitude 5490 SSD hardware replacement,0.75,repair,114:1,Hardware installation and detection test only; excludes OS installation/software licenses/data migration/recovery. Confirm interface and condition.
+S115,115,OptiPlex 7050 SFF power supply replacement,1.00,repair,115:1,Whole compatible PSU swap; no internal PSU repair. Excludes other electrical damage.
+S116,116,iMac 27-inch Late 2013 RAM upgrade,0.50,repair,116:1,One 4GB module through the rear memory access; includes memory test and no screen-opening charge.
+S117,117,iMac 27-inch Late 2013 SATA SSD replacement,2.00,repair,117:1;121:1,Hardware-only job. Extra reseal kit budgeted conservatively; remove overlap if included in SSD kit. Confirm mounting and sensor accessories; OS/data work extra.
+S118,118,iMac 27-inch Late 2013 cooling fan replacement,2.00,repair,118:1;121:1,Includes one reseal kit; requires screen removal. Out-of-stock fan prevents a firm quote.
+S119,119,iMac 27-inch Late 2013 thermal paste service,2.50,repair,119:1;121:1,Includes access/reassembly and one reseal kit; budgets a full paste retail unit conservatively. Extra thermal pads or damage not included.
+S120,120,iMac 27-inch Late 2013 display data cable replacement,1.50,repair,120:1;121:1,Includes screen access and reseal kit; excludes damaged display or logic board. Cable availability must be confirmed.
+S121,121,iMac 27-inch Late 2013 standalone display reseal,1.00,repair,121:1,No other repair included; do not add this entire service to another quote that already includes resealing.
+S122,122,OptiPlex 7050 SFF CMOS battery replacement,0.50,repair,122:0.5,Consumes one cell from the listed two-cell pack; remaining cell stays as stock. Includes BIOS date/settings check; no board repair.
+S123,123,Office/basic ASRock A520M-HDV motherboard swap,2.00,repair,123:1;119:0.2,Existing compatible AM4 CPU/DDR4/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit; confirm actual consumption. BIOS/OS activation issues extra.
+S124,124,Office/basic MSI PRO H610M-G DDR4 motherboard swap,2.00,repair,124:1;119:0.2,Existing compatible LGA1700 CPU/DDR4/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit. Not a proprietary OEM drop-in quote.
+S125,125,Gaming/personal MSI B650 GAMING PLUS WIFI motherboard swap,2.50,repair,125:1;119:0.2,Existing compatible AM5 CPU/DDR5/GPU/cooler/ATX case/PSU reused. Paste allowance is 20 percent of one retail unit. Excludes tuning/overclocking/CPU or RAM platform conversion.
+S126,126,Gaming/personal ASRock B650M Pro RS WiFi motherboard swap,2.50,repair,126:1;119:0.2,Existing compatible AM5 CPU/DDR5/GPU/cooler/case/PSU reused. Paste allowance is 20 percent of one retail unit. Excludes new-build assembly and platform conversion.
