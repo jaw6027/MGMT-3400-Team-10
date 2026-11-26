@@ -1,0 +1,24 @@
+Tech 2 Go parts catalog validation - 2026-11-26 (America/Los_Angeles)
+
+$ python3 tests/validate_database.py
+PASS: CSV contains nine unique unverified leads with no verification dates
+PASS: Six required tables, enabled foreign keys, nine suppliers and eleven category links
+PASS: Second import adds no duplicates and preserves manually edited supplier details
+PASS: Integrity and foreign key checks pass; category filtering returns 5 computer, 2 console and 4 mobile leads
+PASS: Separate Python process reopens persisted suppliers and manual edit
+PASS: Documented comparison isolates exact part/currency and puts unknown totals last
+PASS: Constraints reject orphan keys, duplicate categories, invalid categories/costs/quantities and mismatched purchase listings
+PASS: Explicit CSV updates apply; invalid imports roll back without partial data edits
+All 8 validation groups passed. Synthetic records removed with temporary database.
+
+$ python3 tests/validate_catalog.py
+PASS: 22 products/listings (6 cellphone, 8 laptop, 8 desktop).
+PASS: Every text price, product ID and URL matches the catalog; cents and dates valid.
+PASS: Tracked SQLite snapshot matches all six source CSV tables and repeat imports.
+PASS: integrity_check=ok; foreign_key_check=[]; unknown costs stay incomplete.
+PASS: Three out-of-stock references labeled; no fabricated purchases.
+
+Snapshot: database/retailers.sqlite3
+Suppliers: 9; supplier categories: 11; parts: 22; listings: 22;
+purchases: 0; purchase items: 0.
+Price research is dated source evidence, not a checkout or availability guarantee.

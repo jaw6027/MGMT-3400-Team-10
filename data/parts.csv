@@ -1,1 +1,23 @@
 id,device_category,manufacturer,compatible_model,part_type,condition,quality_grade
+101,mobile devices,Aftermarket (maker unspecified),Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Screen assembly - In-Cell LCD Fix Kit,new,Aftermarket In-Cell LCD; Fix Kit
+102,mobile devices,Aftermarket (maker unspecified),Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Battery Fix Kit,new,Aftermarket; Fix Kit
+103,mobile devices,Not specified by supplier,Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Lightning charging connector assembly - black,new,Black; manufacturer part 821-03154
+104,mobile devices,Not specified by supplier,Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Loudspeaker,new,Replacement
+105,mobile devices,Not specified by supplier,Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Rear camera assembly,new,Replacement; manufacturer part 821-03185
+106,mobile devices,Not specified by supplier,Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max),Cellphone - Display perimeter adhesive,new,Precut adhesive
+107,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); GJKNX 7.6V 68Wh; verify internal drive clearance,Laptop - Main battery - GJKNX 68Wh,new,OEM
+108,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); PA-12 K9TGR/928G4 barrel adapter,Laptop - 65W AC charger - PA-12,new,OEM
+109,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); 5MDFH cable assembly,Laptop - DC input jack with cable,refurbished,OEM
+110,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); P5F39; U-type CPU with integrated Intel graphics only,Laptop - CPU cooling fan,used,OEM; Used: Very Good
+111,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); 6NK3R; dual-pointing layout only,Laptop - US backlit keyboard - dual pointing,refurbished,OEM
+112,computers,Dell,Dell Latitude 5490 (confirm Service Tag and original part number); X3KG3 FHD eDP panel; verify connector/cable,Laptop - 14-inch FHD matte LCD panel,new,OEM
+113,computers,Not specified by supplier,Dell Latitude 5490 (confirm Service Tag and original part number); 8GB DDR4-2133 PC4-17000 SO-DIMM,Laptop - 8GB DDR4-2133 SO-DIMM RAM module,,
+114,computers,Samsung,Dell Latitude 5490 (confirm Service Tag and original part number); Dell KP08D; confirm drive interface,Laptop - Samsung 256GB M.2 2280 SSD,,
+115,computers,Dell,Dell OptiPlex 7050 Small Form Factor; WWM46 D180EPS-01,Desktop - 180W SFF power supply,new,OEM
+116,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); 204-pin PC3L-12800 SO-DIMM",Desktop - 4GB DDR3L-1600 SO-DIMM RAM module,new,Replacement
+117,computers,Crucial,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); CT480BX500SSD1; SATA replacement; mounting/sensor requirements apply",Desktop - Crucial BX500 480GB SATA SSD Upgrade Kit,new,Genuine Crucial drive; Upgrade Kit
+118,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); fan assembly 610-0216",Desktop - Internal cooling fan,new,Replacement
+119,computers,iFixit,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); processor/heatsink interface using thermal paste",Desktop - Thermal paste - Part Only,new,Part Only consumable
+120,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); display-to-logic-board cable",Desktop - Display data cable,new,Replacement
+121,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2)",Desktop - Display adhesive strips Fix Kit,new,Fix Kit
+122,computers,Not specified by supplier,Dell OptiPlex 7050 Small Form Factor; non-rechargeable 3V CR2032 holder,Desktop - CR2032 CMOS battery - two-cell pack,new,Two-cell pack

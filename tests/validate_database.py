@@ -34,7 +34,11 @@ with tempfile.TemporaryDirectory() as tmp:
         assert db.execute('PRAGMA foreign_keys').fetchone()[0] == 1
         assert set(TABLES) <= {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
         counts = {t:db.execute(f'SELECT COUNT(*) FROM {t}').fetchone()[0] for t in TABLES}
-        assert counts == dict(suppliers=9, supplier_categories=11, parts=0, supplier_listings=0, purchases=0, purchase_items=0)
+        with (ROOT/'data/parts.csv').open(newline='') as f:
+            expected_parts = len(list(csv.DictReader(f)))
+        with (ROOT/'data/supplier_listings.csv').open(newline='') as f:
+            expected_listings = len(list(csv.DictReader(f)))
+        assert counts == dict(suppliers=9, supplier_categories=11, parts=expected_parts, supplier_listings=expected_listings, purchases=0, purchase_items=0)
         db.execute("UPDATE suppliers SET notes='Manually edited detail' WHERE id=1")
     passed('Six required tables, enabled foreign keys, nine suppliers and eleven category links')
     initialize(path)
@@ -80,7 +84,7 @@ with tempfile.TemporaryDirectory() as tmp:
         rejected(db,"UPDATE purchase_items SET part_id=2")
         rejected(db,"UPDATE purchases SET total_cents=-1")
         db.rollback()
-        assert db.execute('SELECT COUNT(*) FROM parts').fetchone()[0]==0
+        assert db.execute('SELECT COUNT(*) FROM parts').fetchone()[0]==counts['parts']
     passed('Constraints reject orphan keys, duplicate categories, invalid categories/costs/quantities and mismatched purchase listings')
     # Explicit CSV updates work; failed imports roll back all data changes.
     csvdir=Path(tmp)/'csv'; shutil.copytree(ROOT/'data',csvdir)

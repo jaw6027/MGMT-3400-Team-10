@@ -1,0 +1,218 @@
+TECH 2 GO - COMMON REPAIR PARTS AND RETAIL PRICE EXAMPLES
+Prepared: November 26, 2026 (America/Los_Angeles)
+
+Scope: 22 individually identified products covering common repair part types.
+These are representative compatible examples, not universal parts, a sales-frequency
+ranking, or a complete inventory for every phone/computer model. Older serviceable
+models are included to make compatibility and sourcing concrete.
+
+Prices are advertised US retail product prices in USD, accessed 2026-11-26.
+Sources are official retailer pages retrieved through web search; some content
+is cached. These are dated price observations, not checkout-verified quotations.
+Labor, tax, shipping, travel, tools not included in the selected kit, and markup
+are excluded. Kits and packs are priced as the stated retail unit, not per
+component. Stock is the status shown on the product/evidence page, not reserved
+inventory. Recheck exact variant, condition, price and stock before ordering.
+
+The price is stored in supplier_listings.unit_price_cents; each product has its
+own parts row. Computers retain the existing broad database category; Laptop /
+Desktop prefixes on part_type distinguish them without changing the schema.
+Unknown shipping/tax values remain NULL; no incomplete total is a lowest-price claim.
+Supplier-wide verification remains unverified; this research checks named listings only.
+
+CELLPHONES
+--------------------
+Part ID 101 | Screen assembly - In-Cell LCD Fix Kit | USD $81.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Aftermarket In-Cell LCD; Fix Kit
+  Supplier: iFixit; SKU: IF262-035-4
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/iphone-13-screen
+  Note: Kit price, not a bare OLED screen. LCD has different display performance; supplier warns about automatic brightness and transferring paired sensors.
+
+Part ID 102 | Battery Fix Kit | USD $45.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Aftermarket; Fix Kit
+  Supplier: iFixit; SKU: IF262-036-2
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/iphone-13-battery
+  Note: Selected New / Fix Kit price. Includes tools; do not treat as a part-only quote. Battery shipping restrictions apply.
+
+Part ID 103 | Lightning charging connector assembly - black | USD $49.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Black; manufacturer part 821-03154
+  Supplier: iFixit; SKU: IF262-040-1
+  Stock observed: in stock
+  Product: https://www.ifixit.com/products/iphone-13-lightning-connector-assembly
+  Note: Example for a charging-port repair; Lightning is not interchangeable with USB-C.
+
+Part ID 104 | Loudspeaker | USD $24.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Replacement
+  Supplier: iFixit; SKU: IF262-043-1
+  Stock observed: in stock
+  Product: https://www.ifixit.com/products/iphone-13-loudspeaker
+  Note: Example for failed or distorted speaker output.
+
+Part ID 105 | Rear camera assembly | USD $24.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Replacement; manufacturer part 821-03185
+  Supplier: iFixit; SKU: IF262-058-1
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/iphone-13-13-mini-rear-camera
+  Note: This is the camera module, not the outer lens glass.
+
+Part ID 106 | Display perimeter adhesive | USD $4.99
+  Fits: Apple iPhone 13 A2482 (US; not mini/Pro/Pro Max)
+  Condition: new; variant/grade: Precut adhesive
+  Supplier: iFixit; SKU: IF262-005-1
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/iphone-13-display-assembly-adhesive
+  Note: One precut set. Replacement adhesive does not guarantee restoration of water resistance.
+
+LAPTOPS
+--------------------
+Part ID 107 | Main battery - GJKNX 68Wh | USD $99.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); GJKNX 7.6V 68Wh; verify internal drive clearance
+  Condition: new; variant/grade: OEM
+  Supplier: Parts-People; SKU: GJKNX
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=26759
+  Note: Match battery voltage, connector and physical clearance. Larger battery options can conflict with a 2.5-inch drive.
+
+Part ID 108 | 65W AC charger - PA-12 | USD $24.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); PA-12 K9TGR/928G4 barrel adapter
+  Condition: new; variant/grade: OEM
+  Supplier: Parts-People; SKU: K9TGR
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=15728
+  Price evidence: https://www.parts-people.com/index.php?action=category&id=140&subid=1191
+  Note: External replacement charger; confirm connector, voltage and system wattage. Price observed on model category page.
+
+Part ID 109 | DC input jack with cable | USD $7.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); 5MDFH cable assembly
+  Condition: refurbished; variant/grade: OEM
+  Supplier: Parts-People; SKU: 5MDFH
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=24824
+  Note: Modular jack/cable example; soldered USB-C charging repairs require different parts and work.
+
+Part ID 110 | CPU cooling fan | USD $12.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); P5F39; U-type CPU with integrated Intel graphics only
+  Condition: used; variant/grade: OEM; Used: Very Good
+  Supplier: Parts-People; SKU: P5F39
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=25331
+  Note: Not compatible with the discrete-graphics configuration.
+
+Part ID 111 | US backlit keyboard - dual pointing | USD $19.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); 6NK3R; dual-pointing layout only
+  Condition: refurbished; variant/grade: OEM
+  Supplier: Parts-People; SKU: 6NK3R
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=28012
+  Note: Match pointing-stick layout and keyboard part number; single-pointing keyboards differ.
+
+Part ID 112 | 14-inch FHD matte LCD panel | USD $49.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); X3KG3 FHD eDP panel; verify connector/cable
+  Condition: new; variant/grade: OEM
+  Supplier: Parts-People; SKU: X3KG3
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=31346
+  Price evidence: https://www.parts-people.com/index.php?action=category&id=140&refine=lcd+screen&subid=1191
+  Note: Advertised sale price on model category page. Match resolution, connector and touch/non-touch configuration.
+
+Part ID 113 | 8GB DDR4-2133 SO-DIMM RAM module | USD $39.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); 8GB DDR4-2133 PC4-17000 SO-DIMM
+  Condition: not established; variant/grade: not established
+  Supplier: Parts-People; SKU: WP8GB1700
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=22371
+  Price evidence: https://www.parts-people.com/index.php?action=category&id=140&refine=ram+memory&subid=1191
+  Note: Price and fit listed on model category page. Condition/manufacturer not established; confirm before purchase.
+
+Part ID 114 | Samsung 256GB M.2 2280 SSD | USD $39.95
+  Fits: Dell Latitude 5490 (confirm Service Tag and original part number); Dell KP08D; confirm drive interface
+  Condition: not established; variant/grade: not established
+  Supplier: Parts-People; SKU: KP08D
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=30632
+  Price evidence: https://www.parts-people.com/index.php?action=category&id=140&subid=1191
+  Note: Price on model category page. M.2 is a form factor, not a guarantee of SATA/NVMe compatibility. Condition not established.
+
+DESKTOPS
+--------------------
+Part ID 115 | 180W SFF power supply | USD $29.95
+  Fits: Dell OptiPlex 7050 Small Form Factor; WWM46 D180EPS-01
+  Condition: new; variant/grade: OEM
+  Supplier: Parts-People; SKU: WWM46
+  Stock observed: in stock
+  Product: https://www.parts-people.com/index.php?action=item&id=40126
+  Note: Proprietary SFF example, not a universal ATX power supply. Match connectors and chassis.
+
+Part ID 116 | 4GB DDR3L-1600 SO-DIMM RAM module | USD $34.99
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); 204-pin PC3L-12800 SO-DIMM
+  Condition: new; variant/grade: Replacement
+  Supplier: iFixit; SKU: IF111-043-1
+  Stock observed: in stock
+  Product: https://www.ifixit.com/products/pc3l-12800-4-gb-ram-chip
+  Note: All-in-one desktop example. Most towers use full-size DIMMs; SO-DIMM and DIMM are not interchangeable.
+
+Part ID 117 | Crucial BX500 480GB SATA SSD Upgrade Kit | USD $102.99
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); CT480BX500SSD1; SATA replacement; mounting/sensor requirements apply
+  Condition: new; variant/grade: Genuine Crucial drive; Upgrade Kit
+  Supplier: iFixit; SKU: IF107-173-2
+  Stock observed: out of stock
+  Product: https://www.ifixit.com/products/crucial-bx500-480gb-ssd
+  Note: Selected Upgrade Kit price, not bare-drive price. Page currently reports out of stock; retained as a dated reference.
+
+Part ID 118 | Internal cooling fan | USD $62.99
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); fan assembly 610-0216
+  Condition: new; variant/grade: Replacement
+  Supplier: iFixit; SKU: IF174-009-2
+  Stock observed: out of stock
+  Product: https://www.ifixit.com/products/imac-intel-27-late-2012-late-2015-fan
+  Note: All-in-one fan example, not a standard tower case fan. Product page reports out of stock.
+
+Part ID 119 | Thermal paste - Part Only | USD $9.95
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); processor/heatsink interface using thermal paste
+  Condition: new; variant/grade: Part Only consumable
+  Supplier: iFixit; SKU: IF145-528-3
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/ifixit-thermal-paste?variant=41343451431015
+  Note: Price is for the retail paste product, not one repair application. Does not substitute for required thermal pads.
+
+Part ID 120 | Display data cable | USD $19.99
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); display-to-logic-board cable
+  Condition: new; variant/grade: Replacement
+  Supplier: iFixit; SKU: IF174-056-1
+  Stock observed: out of stock
+  Product: https://www.ifixit.com/products/imac-intel-27-emc-2546-and-2639-display-data-cable
+  Note: All-in-one display cable, not a SATA data cable. Product page reports out of stock.
+
+Part ID 121 | Display adhesive strips Fix Kit | USD $29.99
+  Fits: Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2)
+  Condition: new; variant/grade: Fix Kit
+  Supplier: iFixit; SKU: not established
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/imac-intel-27-2012-2019-adhesive-strips
+  Note: Selected Fix Kit price. Needed when resealing a display after internal service; not a single strip.
+
+Part ID 122 | CR2032 CMOS battery - two-cell pack | USD $3.99
+  Fits: Dell OptiPlex 7050 Small Form Factor; non-rechargeable 3V CR2032 holder
+  Condition: new; variant/grade: Two-cell pack
+  Supplier: iFixit; SKU: IF207-011-1
+  Stock observed: ready to ship
+  Product: https://www.ifixit.com/products/cr2032-lithium-battery
+  Note: Pack price is for two cells, not one. Desktop fit established by Dell owner manual page 76 (PDF page 76).
+
+ADDITIONAL COMPATIBILITY SOURCE
+Dell OptiPlex 7050 SFF Owner Manual, technical specifications, printed page 76:
+https://dl.dell.com/topicspdf/optiplex-7050-desktop_owners-manual3_en-us.pdf
+
+BUYING NOTES
+Confirm the precise device model, regional variant and original part number.
+For additional Android phones or newer laptop/desktop models, add distinct rows
+after checking the appropriate supplier listing; do not reuse a sample model price.
+Soldered memory/storage and board-level repairs need separate assessment.
+This is a parts sourcing list, not Tech 2 Go customer repair pricing.

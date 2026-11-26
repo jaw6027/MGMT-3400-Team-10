@@ -12,17 +12,20 @@ python3 tests/validate_database.py
 The first command imports `data/*.csv` into `output/retailers.sqlite3`.
 It can be rerun safely: existing primary keys are preserved, including manually
 edited supplier details. New IDs and category links are added. No rows are deleted.
-Generated databases are ignored by Git; CSVs, SQL and scripts are the reusable source.
+Working databases in `output/` are ignored by Git. The populated, versioned snapshot
+`database/retailers.sqlite3` is included for direct download; CSVs, SQL and scripts
+remain the reusable source.
 The script resolves default paths relative to itself, so it also works from other
 working directories. Use `--db /absolute/path/database.sqlite3` for another output.
 
 ## What is actually known
 
-The initial directory contains **nine unverified conversation leads**. The names,
-URLs, categories and roles were copied from saved setup instructions, not checked
-against current supplier sites. None is established as local to the Antelope Valley.
-Inventory, account requirements, addresses, contacts, warranty/returns, shipping,
-prices, delivery dates and pickup availability remain unknown. Source URLs are
+The initial directory contains **nine unverified conversation leads**. The supplier names, URLs, categories and roles originated in saved setup
+instructions. Named iFixit and Parts-People listings have since been researched
+for the parts catalog; this does not verify every supplier or supplier-wide term. None is established as local to the Antelope Valley.
+Supplier-wide account requirements, addresses, contacts, warranty/returns, delivery
+terms and pickup availability remain unverified. Named product prices and stock
+observations are recorded separately in `supplier_listings`. Source URLs are
 starting points for research, not citations proving current claims. All verification
 dates and unknown factual fields are blank/NULL. Do not use the category counts as
 verified evidence of current product availability.
@@ -51,8 +54,8 @@ unique and consistently formatted; use the existing canonical URL for a supplier
 |---|---|
 | suppliers | 9 leads; contact/location, account, policy, warranty and verification fields |
 | supplier_categories | 11 preliminary supplier/category links |
-| parts | Empty template; exact manufacturer/model and part specifications |
-| supplier_listings | Empty template; dated supplier offers for a specific part |
+| parts | 22 named products; exact example models and part specifications |
+| supplier_listings | 22 dated USD retail price observations with supplier URLs |
 | purchases | Empty template; actual orders and shipping/tax/total costs |
 | purchase_items | Empty template; purchased parts, quantities, defects and returns |
 
@@ -124,3 +127,34 @@ controls and an appointment request preview. Open `Website/index.html` in a brow
 or run `python3 -m http.server 4173 --directory Website`. Build a portable HTML file
 and source ZIP with `python3 scripts/package_website.py`. See `Website/README.md`
 for configuration, testing and what is needed to accept real bookings.
+
+
+## Common repair parts and prices
+
+`common_parts_prices.txt` lists 6 cellphone, 8 laptop and 8 desktop products or
+consumables, with prices, selected kit/pack variants, condition, model fit, sources
+and purchasing notes. These are practical examples of common part types, not a
+measured popularity ranking or universal compatibility list. Older serviceable
+models are included. Prices were accessed November 26, 2026 from official retailer
+pages via web search; some source pages are cached. Recheck before ordering.
+
+Each item has its own `parts` row (IDs 101–122) and linked `supplier_listings` row.
+Kits and packs are priced per listed retail unit. Unknown shipping/tax remain
+NULL, and out-of-stock products remain explicitly flagged. Laptop and Desktop
+prefixes in `part_type` distinguish computer types within the existing schema.
+No purchases or inventory-on-hand are implied.
+
+Download `database/retailers.sqlite3` and open it in DB Browser for SQLite to browse
+the populated snapshot. For day-to-day edits, use a copy in `output/`. To reproduce
+the repository snapshot from the CSVs, use a new destination file:
+
+```sh
+python3 scripts/database.py --db output/catalog-rebuilt.sqlite3
+python3 tests/validate_database.py
+python3 tests/validate_catalog.py
+```
+
+The catalog check confirms row-level agreement between the CSVs, text price list
+and repository snapshot, idempotent imports, safe incomplete totals and SQLite
+integrity/foreign keys. See `database/VALIDATION.txt` for current results. The root
+`VALIDATION.txt` is the historical, supplier-only setup report.
