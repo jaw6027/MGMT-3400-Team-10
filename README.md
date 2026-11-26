@@ -201,3 +201,20 @@ usage is explicit; shared teardown and resealing must be recalculated for combin
 jobs. Financial reserves do not define a customer warranty. This workflow does
 not change supplier prices, the SQLite sourcing database or the customer website.
 See `pricing/VALIDATION.txt` for the observed checks.
+
+## Repair content planner
+
+`content_planner/` contains a local Tech 2 Go content board, calendar and results
+tracker with 12 starter stories across four suggested weeks. Each story has a hook,
+outline, shot list, review notes and relevant repair IDs. Edit the plan in your
+browser, back up JSON and export CSV; posts are published manually outside the app.
+No social accounts, customer files or credentials are needed.
+
+```sh
+python3 -m http.server 4176 --directory content_planner
+python3 scripts/package_content_planner.py
+```
+
+The packaging command creates `output/tech2go-content-planner.html` and a source ZIP.
+See `content_planner/README.md` for the weekly workflow, storage limitations and
+verification, and `content_planner/story_template.txt` for a reusable video brief.

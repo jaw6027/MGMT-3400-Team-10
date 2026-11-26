@@ -1,0 +1,17 @@
+Tech 2 Go content planner - validation performed 2026-11-26
+
+Browser checks passed against both the editable source and the bundled portable HTML:
+- Twelve unique starter stories reference valid repair IDs where supplied.
+- No seed story claims publication, established permission or measured results.
+- Board, calendar, search, story editing and browser persistence work.
+- Ready/Published require permission and all three review checks.
+- Published requires a post URL and actual publication date.
+- Manual inquiry-rate calculation matches 10 / 1000 = 1.00%.
+- JSON backup/restore preserves edits; invalid imports leave data unchanged.
+- CSV export escapes spreadsheet formula-leading text.
+- No JavaScript runtime errors or page overflow at 320, 390, 768 or 1440 pixels.
+- Desktop and mobile screenshots were captured; desktop layout was inspected.
+
+Test-only publication records and metrics were created in isolated browser contexts.
+They are absent from the distributed starter data. No social post, customer message,
+real booking or automatic schedule was created.

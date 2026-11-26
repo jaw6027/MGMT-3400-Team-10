@@ -1,0 +1,64 @@
+const {chromium}=require('playwright');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+const url=process.env.TECH2GO_CONTENT_URL||'http://127.0.0.1:4176/';
+(async()=>{
+ const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'content_planner/seed.js'),'utf8'),sandbox);
+ const seeds=sandbox.window.TECH2GO_CONTENT_SEED;
+ if(seeds.length!==12||new Set(seeds.map(r=>r.id)).size!==12)throw Error('Expected 12 unique stories');
+ const services=new Set(fs.readFileSync(path.join(root,'pricing/services.csv'),'utf8').split('\n').slice(1).map(r=>r.split(',')[0]));
+ for(const row of seeds){
+  if(row.stage!=='Planned'||row.footage_permission!=='pending')throw Error('Seed implies completed work');
+  for(const k of ['views','saves','shares','inquiries','bookings','published_date','post_url'])if(row[k])throw Error('Seed includes fabricated results');
+  for(const id of row.service_ids.split(';').filter(Boolean))if(!services.has(id))throw Error('Unknown repair ID: '+id);
+ }
+ const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
+ const page=await browser.newPage({viewport:{width:1440,height:1100},acceptDownloads:true});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(url);
+ await page.screenshot({path:path.join(root,'output/content-planner-desktop.png'),fullPage:true});
+ if(await page.locator('.story').count()!==12)throw Error('Missing seed stories');
+ await page.locator('[data-view=calendar]').click();if(await page.locator('.calendar-day').count()!==12)throw Error('Missing calendar days');
+ await page.locator('[data-view=board]').click();
+ await page.getByRole('button',{name:'Edit C001: Battery or bad habits?',exact:true}).click();
+ await page.locator('[name=stage]').selectOption('Ready');await page.getByRole('button',{name:'Save story',exact:true}).click();
+ if(!await page.locator('#edit-error').isVisible())throw Error('Ready bypassed review');
+ await page.locator('[name=footage_permission]').selectOption('own_demo');
+ for(const k of ['privacy_checked','technical_checked','cta_checked'])await page.locator(`[name=${k}]`).check();
+ await page.getByRole('button',{name:'Save story',exact:true}).click();
+ await page.reload();
+ if(!(await page.locator('#summary').textContent()).includes('1 ready'))throw Error('Browser save failed');
+ await page.getByRole('button',{name:'Edit C001: Battery or bad habits?',exact:true}).click();
+ await page.locator('[name=stage]').selectOption('Published');await page.getByRole('button',{name:'Save story',exact:true}).click();
+ if(!(await page.locator('#edit-error').textContent()).includes('URL'))throw Error('Published without real-record fields');
+ const today=await page.evaluate(()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()));
+ await page.locator('[name=post_url]').fill('https://example.com/test-only');
+ await page.locator('[name=published_date]').fill(today);await page.locator('[name=measurement_date]').fill(today);
+ await page.locator('[name=views]').fill('1000');await page.locator('[name=inquiries]').fill('10');await page.locator('[name=bookings]').fill('2');
+ await page.getByRole('button',{name:'Save story',exact:true}).click();
+ await page.locator('[data-view=results]').click();if(!(await page.locator('#view').textContent()).includes('1.00%'))throw Error('Inquiry rate wrong');
+ const jsonWait=page.waitForEvent('download');await page.locator('#backup').click();const backup=await jsonWait;const backupPath=await backup.path();
+ const parsed=JSON.parse(fs.readFileSync(backupPath,'utf8'));if(parsed.length!==12||parsed[0].views!=='1000')throw Error('Backup incomplete');
+ await page.locator('#new').click();await page.locator('[name=title]').fill('=1+1');await page.getByRole('button',{name:'Save story',exact:true}).click();
+ const csvWait=page.waitForEvent('download');await page.locator('#export-csv').click();const csv=await csvWait;
+ if(!fs.readFileSync(await csv.path(),'utf8').includes("'=1+1"))throw Error('Spreadsheet formula not escaped');
+ page.on('dialog',d=>d.accept());
+ await page.locator('#import-file').setInputFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(parsed))});
+ await page.waitForFunction(()=>document.getElementById('summary').textContent.startsWith('12 of 12'));
+ await page.locator('#import-file').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('[{"id":"bad"}]')});
+ await page.waitForFunction(()=>document.getElementById('notice').textContent.startsWith('Import stopped:'));
+ if(!(await page.locator('#summary').textContent()).startsWith('12 of 12'))throw Error('Invalid import altered data');
+ await page.locator('[data-view=board]').click();await page.locator('#search').fill('motherboard');
+ if(await page.locator('.story').count()!==1)throw Error('Search failed');await page.locator('#search').fill('');
+ for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:900});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Overflow '+width);}
+ // A separate browser context captures the unedited starter, without test results.
+ const mobile=await browser.newPage({viewport:{width:390,height:844}});await mobile.goto(url);
+ await mobile.screenshot({path:path.join(root,'output/content-planner-mobile.png'),fullPage:true});
+ if(errors.length)throw Error(errors.join('\n'));
+ await browser.close();
+ console.log('PASS: 12 repair-linked drafts; no fabricated results; board/calendar/search; editing and local persistence.');
+ console.log('PASS: Ready/Published checks; manual metric calculation; JSON backup/restore; invalid import rejection; safe CSV export.');
+ console.log('PASS: no runtime errors or horizontal overflow at 320/390/768/1440px; desktop/mobile screenshots captured.');
+})().catch(e=>{console.error(e);process.exit(1)});
