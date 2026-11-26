@@ -21,7 +21,7 @@ working directories. Use `--db /absolute/path/database.sqlite3` for another outp
 ## What is actually known
 
 The initial directory contains **nine unverified conversation leads**. The supplier names, URLs, categories and roles originated in saved setup
-instructions. Named iFixit and Parts-People listings have since been researched
+instructions. Named iFixit, Parts-People and Newegg listings have since been researched
 for the parts catalog; this does not verify every supplier or supplier-wide term. None is established as local to the Antelope Valley.
 Supplier-wide account requirements, addresses, contacts, warranty/returns, delivery
 terms and pickup availability remain unverified. Named product prices and stock
@@ -54,8 +54,8 @@ unique and consistently formatted; use the existing canonical URL for a supplier
 |---|---|
 | suppliers | 9 leads; contact/location, account, policy, warranty and verification fields |
 | supplier_categories | 11 preliminary supplier/category links |
-| parts | 22 named products; exact example models and part specifications |
-| supplier_listings | 22 dated USD retail price observations with supplier URLs |
+| parts | 26 named products; exact example models and part specifications |
+| supplier_listings | 26 dated USD retail price observations with supplier URLs |
 | purchases | Empty template; actual orders and shipping/tax/total costs |
 | purchase_items | Empty template; purchased parts, quantities, defects and returns |
 
@@ -131,14 +131,14 @@ for configuration, testing and what is needed to accept real bookings.
 
 ## Common repair parts and prices
 
-`common_parts_prices.txt` lists 6 cellphone, 8 laptop and 8 desktop products or
+`common_parts_prices.txt` lists 6 cellphone, 8 laptop and 12 desktop products or
 consumables, with prices, selected kit/pack variants, condition, model fit, sources
 and purchasing notes. These are practical examples of common part types, not a
 measured popularity ranking or universal compatibility list. Older serviceable
 models are included. Prices were accessed November 26, 2026 from official retailer
 pages via web search; some source pages are cached. Recheck before ordering.
 
-Each item has its own `parts` row (IDs 101–122) and linked `supplier_listings` row.
+Each item has its own `parts` row (IDs 101–126) and linked `supplier_listings` row.
 Kits and packs are priced per listed retail unit. Unknown shipping/tax remain
 NULL, and out-of-stock products remain explicitly flagged. Laptop and Desktop
 prefixes in `part_type` distinguish computer types within the existing schema.
@@ -158,3 +158,21 @@ The catalog check confirms row-level agreement between the CSVs, text price list
 and repository snapshot, idempotent imports, safe incomplete totals and SQLite
 integrity/foreign keys. See `database/VALIDATION.txt` for current results. The root
 `VALIDATION.txt` is the historical, supplier-only setup report.
+
+
+### Motherboards
+
+The desktop catalog includes two **Office/basic** and two **Gaming/personal**
+motherboards (IDs 123–126). These are sourcing recommendations based on features
+and total platform cost, not measured customer demographics. Office examples use
+DDR4; gaming examples use AM5/DDR5 and offer more expansion/networking features.
+Sale prices can overlap. Compare board, CPU, RAM and graphics costs together.
+
+Subcategories are stored explicitly in `parts.part_type` as
+`Desktop - Motherboard [Office/basic] - ...` and
+`Desktop - Motherboard [Gaming/personal] - ...`, preserving the existing schema.
+Filter by these prefixes or run `sql/motherboards.sql`. Each row identifies the
+exact board model, socket, RAM type and form factor; the text list links official
+manufacturer specifications and explains CPU-support/BIOS checks. No OEM
+prebuilt-system drop-in fit or gaming performance is implied. All four selected
+listings record Newegg as the actual seller; prices exclude tax and shipping.

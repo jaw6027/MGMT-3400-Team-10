@@ -12,13 +12,15 @@ PASS: Explicit CSV updates apply; invalid imports roll back without partial data
 All 8 validation groups passed. Synthetic records removed with temporary database.
 
 $ python3 tests/validate_catalog.py
-PASS: 22 products/listings (6 cellphone, 8 laptop, 8 desktop).
+PASS: 26 products/listings (6 cellphone, 8 laptop, 12 desktop).
 PASS: Every text price, product ID and URL matches the catalog; cents and dates valid.
 PASS: Tracked SQLite snapshot matches all six source CSV tables and repeat imports.
 PASS: integrity_check=ok; foreign_key_check=[]; unknown costs stay incomplete.
 PASS: Three out-of-stock references labeled; no fabricated purchases.
+PASS: Two motherboards per use-case subcategory, actual sellers and compatibility recorded.
 
 Snapshot: database/retailers.sqlite3
-Suppliers: 9; supplier categories: 11; parts: 22; listings: 22;
+Suppliers: 9; supplier categories: 11; parts: 26; listings: 26;
 purchases: 0; purchase items: 0.
+Motherboards: 2 Office/basic and 2 Gaming/personal (IDs 123-126).
 Price research is dated source evidence, not a checkout or availability guarantee.

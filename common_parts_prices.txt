@@ -1,7 +1,7 @@
 TECH 2 GO - COMMON REPAIR PARTS AND RETAIL PRICE EXAMPLES
 Prepared: November 26, 2026 (America/Los_Angeles)
 
-Scope: 22 individually identified products covering common repair part types.
+Scope: 26 individually identified products covering common repair part types.
 These are representative compatible examples, not universal parts, a sales-frequency
 ranking, or a complete inventory for every phone/computer model. Older serviceable
 models are included to make compatibility and sourcing concrete.
@@ -205,6 +205,75 @@ Part ID 122 | CR2032 CMOS battery - two-cell pack | USD $3.99
   Stock observed: ready to ship
   Product: https://www.ifixit.com/products/cr2032-lithium-battery
   Note: Pack price is for two cells, not one. Desktop fit established by Dell owner manual page 76 (PDF page 76).
+
+DESKTOP MOTHERBOARDS - TWO SOURCING SUBCATEGORIES
+------------------------------------------------
+These are Tech 2 Go use-case groupings based on features and platform costs,
+not measured buyer demographics or exclusive capabilities. Office boards can
+also run games; gaming boards can run office applications. Promotional prices
+can overlap. Compare CPU + RAM + cooling + graphics + board cost, not board
+price alone. Standard retail boards are not guaranteed drop-in replacements
+for proprietary Dell/HP/Lenovo office cases, front-panel wiring or power supplies.
+The 68Wh laptop battery, SFF PSU and other earlier parts remain separate items.
+
+Motherboard-only prices below are USD advertised prices accessed 2026-11-26.
+Seller and shipper: Newegg for all four selected offers, not alternative
+marketplace offers. Sources may be cached; price/stock require rechecking.
+CPU, RAM, GPU, cooler, case, operating system, labor, tax and shipping excluded.
+
+OFFICE / BASIC BUSINESS DESKTOPS
+--------------------------------
+Part ID 123 | Motherboard [Office/basic] - ASRock A520M-HDV | USD $72.99
+  Subcategory: Office/basic
+  Fits/platform: ASRock A520M-HDV; AM4; DDR4 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked
+  Condition: new; retail motherboard only
+  Supplier: Newegg; actual seller: Newegg; SKU: N82E16813157958
+  Stock observed: available to order (Add to cart shown; not reserved)
+  Product / price evidence: https://www.newegg.com/asrock-a520m-hdv-micro-atx-amd-motherboard-amd-a520-am4/p/N82E16813157958?Item=N82E16813157958&SoldByNewegg=1
+  Manufacturer specifications / CPU support: https://www.asrock.com/mb/AMD/A520M-HDV/index.asp
+  Why this group: Budget AM4 replacement/build option when compatible CPU and DDR4 can be reused. Two memory slots, Gigabit LAN and one M.2 storage socket cover basic office needs. Use a supported Ryzen with integrated graphics for motherboard display outputs; otherwise add a graphics card.
+
+Part ID 124 | Motherboard [Office/basic] - MSI PRO H610M-G DDR4 | USD $109.99
+  Subcategory: Office/basic
+  Fits/platform: MSI PRO H610M-G DDR4; LGA1700; DDR4 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked
+  Condition: new; retail motherboard only
+  Supplier: Newegg; actual seller: Newegg; SKU: N82E16813144525
+  Stock observed: available to order (Add to cart shown; not reserved)
+  Product / price evidence: https://www.newegg.com/msi-pro-h610m-g-ddr4-micro-atx-intel-motherboard-intel-h610-lga-1700/p/N82E16813144525?Item=N82E16813144525&SoldByNewegg=1
+  Manufacturer specifications / CPU support: https://www.msi.com/Motherboard/PRO-H610M-G-DDR4/Specification
+  Why this group: Business-oriented H610 board for supported Intel 12th/13th/14th-generation CPUs. Two DDR4 slots and display outputs suit straightforward office builds. CPU support/BIOS must be checked; F-suffix CPUs require a discrete GPU for display.
+
+GAMING / PERSONAL DESKTOPS
+--------------------------------
+Part ID 125 | Motherboard [Gaming/personal] - MSI B650 GAMING PLUS WIFI | USD $109.99
+  Subcategory: Gaming/personal
+  Fits/platform: MSI B650 GAMING PLUS WIFI; AM5; DDR5 UDIMM; ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked
+  Condition: new; retail motherboard only
+  Supplier: Newegg; actual seller: Newegg; SKU: N82E16813144628
+  Stock observed: available to order (Add to cart shown; not reserved)
+  Product / price evidence: https://www.newegg.com/msi-b650-gaming-plus-wifi-atx-motherboard-amd-b650-am5/p/N82E16813144628?Item=N82E16813144628
+  Manufacturer specifications / CPU support: https://www.msi.com/Motherboard/B650-GAMING-PLUS-WIFI/Specification
+  Why this group: AM5 enthusiast build option: four DDR5 slots, two M.2 storage sockets, Wi-Fi 6E and 2.5Gb LAN. Full ATX case space required. Advertised sale price is $109.99 versus displayed $149.99 reference price; no bundle price used.
+
+Part ID 126 | Motherboard [Gaming/personal] - ASRock B650M Pro RS WiFi | USD $109.99
+  Subcategory: Gaming/personal
+  Fits/platform: ASRock B650M Pro RS WiFi; AM5; DDR5 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked
+  Condition: new; retail motherboard only
+  Supplier: Newegg; actual seller: Newegg; SKU: N82E16813162131
+  Stock observed: available to order (Add to cart shown; not reserved)
+  Product / price evidence: https://www.newegg.com/asrock-b650m-pro-rs-wifi-micro-atx-motherboard-amd-b650-am5/p/N82E16813162131
+  Manufacturer specifications / CPU support: https://www.asrock.com/mb/AMD/B650M%20Pro%20RS%20WiFi/index.asp
+  Why this group: Compact AM5 gaming/personal build option: four DDR5 slots, three M.2 storage sockets, Wi-Fi 6E and 2.5Gb LAN. Advertised sale price is $109.99 versus displayed $149.99 reference price; no bundle price used.
+
+MOTHERBOARD COMPATIBILITY AND QUOTING
+Confirm the exact CPU against the manufacturer CPU-support list and the BIOS
+version shipped on the board; matching socket alone is not sufficient. For AM5
+boards verify Ryzen 7000/8000/9000 model support and any required BIOS update.
+Check RAM generation, QVL, board dimensions, cooler mounting, PSU connectors
+and graphics card clearance. Motherboard video outputs require a CPU with
+working integrated graphics. A motherboard alone does not provide gaming FPS;
+CPU, GPU and cooling choices determine much of the result. For an existing
+branded office PC, identify the OEM board part number before quoting a swap.
 
 ADDITIONAL COMPATIBILITY SOURCE
 Dell OptiPlex 7050 SFF Owner Manual, technical specifications, printed page 76:

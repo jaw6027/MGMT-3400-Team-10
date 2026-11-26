@@ -21,3 +21,7 @@ id,supplier_id,part_id,actual_seller,sku,product_url,unit_price_cents,currency,s
 120,3,120,iFixit,IF174-056-1,https://www.ifixit.com/products/imac-intel-27-emc-2546-and-2639-display-data-cable,1999,USD,out_of_stock,,,,,,,2026-11-26
 121,3,121,iFixit,,https://www.ifixit.com/products/imac-intel-27-2012-2019-adhesive-strips,2999,USD,ready_to_ship,,,,,,,2026-11-26
 122,3,122,iFixit,IF207-011-1,https://www.ifixit.com/products/cr2032-lithium-battery,399,USD,ready_to_ship,,,,,,,2026-11-26
+123,7,123,Newegg,N82E16813157958,https://www.newegg.com/asrock-a520m-hdv-micro-atx-amd-motherboard-amd-a520-am4/p/N82E16813157958?Item=N82E16813157958&SoldByNewegg=1,7299,USD,available_to_order,,,,,,,2026-11-26
+124,7,124,Newegg,N82E16813144525,https://www.newegg.com/msi-pro-h610m-g-ddr4-micro-atx-intel-motherboard-intel-h610-lga-1700/p/N82E16813144525?Item=N82E16813144525&SoldByNewegg=1,10999,USD,available_to_order,,,,,,,2026-11-26
+125,7,125,Newegg,N82E16813144628,https://www.newegg.com/msi-b650-gaming-plus-wifi-atx-motherboard-amd-b650-am5/p/N82E16813144628?Item=N82E16813144628,10999,USD,available_to_order,,,,,,,2026-11-26
+126,7,126,Newegg,N82E16813162131,https://www.newegg.com/asrock-b650m-pro-rs-wifi-micro-atx-motherboard-amd-b650-am5/p/N82E16813162131,10999,USD,available_to_order,,,,,,,2026-11-26

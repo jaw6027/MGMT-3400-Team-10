@@ -21,3 +21,7 @@ id,device_category,manufacturer,compatible_model,part_type,condition,quality_gra
 120,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2); display-to-logic-board cable",Desktop - Display data cable,new,Replacement
 121,computers,Not specified by supplier,"Apple iMac 27-inch Late 2013 A1419 EMC 2639 (iMac14,2)",Desktop - Display adhesive strips Fix Kit,new,Fix Kit
 122,computers,Not specified by supplier,Dell OptiPlex 7050 Small Form Factor; non-rechargeable 3V CR2032 holder,Desktop - CR2032 CMOS battery - two-cell pack,new,Two-cell pack
+123,computers,ASRock,ASRock A520M-HDV; AM4; DDR4 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked,Desktop - Motherboard [Office/basic] - ASRock A520M-HDV,new,Retail motherboard
+124,computers,MSI,MSI PRO H610M-G DDR4; LGA1700; DDR4 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked,Desktop - Motherboard [Office/basic] - MSI PRO H610M-G DDR4,new,Retail motherboard
+125,computers,MSI,MSI B650 GAMING PLUS WIFI; AM5; DDR5 UDIMM; ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked,Desktop - Motherboard [Gaming/personal] - MSI B650 GAMING PLUS WIFI,new,Retail motherboard
+126,computers,ASRock,ASRock B650M Pro RS WiFi; AM5; DDR5 UDIMM; Micro ATX; exact CPU/BIOS and memory QVL required; standard chassis/PSU fit must be checked,Desktop - Motherboard [Gaming/personal] - ASRock B650M Pro RS WiFi,new,Retail motherboard
